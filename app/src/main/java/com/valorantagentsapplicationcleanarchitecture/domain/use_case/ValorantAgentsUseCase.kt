@@ -1,0 +1,6 @@
+package com.valorantagentsapplicationcleanarchitecture.domain.use_case
+
+import com.valorantagentsapplicationcleanarchitecture.domain.repository.ValorantAgentsRepository
+
+class ValorantAgentsUseCase(valorantAgentsRepository: ValorantAgentsRepository) {
+}
