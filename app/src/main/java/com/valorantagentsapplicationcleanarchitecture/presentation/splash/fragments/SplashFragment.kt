@@ -1,10 +1,10 @@
 package com.valorantagentsapplicationcleanarchitecture.presentation.splash.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.valorantagentsapplicationcleanarchitecture.R
@@ -12,6 +12,7 @@ import com.valorantagentsapplicationcleanarchitecture.databinding.FragmentSplash
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+
 @AndroidEntryPoint
 class SplashFragment : Fragment() {
     private lateinit var binding: FragmentSplashBinding
@@ -38,7 +39,7 @@ class SplashFragment : Fragment() {
         requireActivity().window.statusBarColor = requireActivity().resources.getColor(R.color.very_dark_blue)
         lifecycleScope.launch {
             delay(4000)
-//            findNavController().navigate(R.id.agentsScreenFragment)
+            findNavController().navigate(R.id.agentsScreenFragment)
         }
     }
 }

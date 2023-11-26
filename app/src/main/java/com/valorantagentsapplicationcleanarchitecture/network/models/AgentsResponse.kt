@@ -1,14 +1,17 @@
 package com.valorantagentsapplicationcleanarchitecture.network.models
 
-
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class AgentsResponse(
     @SerializedName("data")
     var `data`: List<Data?>?,
     @SerializedName("status")
     var status: Int? // 200
-) {
+) : Parcelable {
+    @Parcelize
     data class Data(
         @SerializedName("abilities")
         var abilities: List<Ability?>?,
@@ -53,8 +56,9 @@ data class AgentsResponse(
         @SerializedName("uuid")
         var uuid: String?, // e370fa57-4757-3604-3648-499e1f642d3f
         @SerializedName("voiceLine")
-        var voiceLine: Any? // null
-    ) {
+        var voiceLine: String? // null
+    ): Parcelable {
+        @Parcelize
         data class Ability(
             @SerializedName("description")
             var description: String?, // EQUIP Wingman. FIRE to send Wingman forward seeking enemies. Wingman unleashes a concussive blast toward the first enemy he sees. ALT FIRE when targeting a Spike site or planted Spike to have Wingman defuse or plant the Spike. To plant, Gekko must have the Spike in his inventory. When Wingman expires he reverts into a dormant globule. INTERACT to reclaim the globule and gain another Wingman charge after a short cooldown.
@@ -64,8 +68,9 @@ data class AgentsResponse(
             var displayName: String?, // Wingman
             @SerializedName("slot")
             var slot: String? // Ability1
-        )
+        ): Parcelable
 
+        @Parcelize
         data class RecruitmentData(
             @SerializedName("counterId")
             var counterId: String?, // 7ec37a1e-4526-77dd-1afd-e2ab3b624085
@@ -81,8 +86,9 @@ data class AgentsResponse(
             var startDate: String?, // 2023-06-27T00:00:00Z
             @SerializedName("useLevelVpCostOverride")
             var useLevelVpCostOverride: Boolean? // false
-        )
+        ): Parcelable
 
+        @Parcelize
         data class Role(
             @SerializedName("assetPath")
             var assetPath: String?, // ShooterGame/Content/Characters/_Core/Roles/Breaker_PrimaryDataAsset
@@ -94,6 +100,6 @@ data class AgentsResponse(
             var displayName: String?, // Initiator
             @SerializedName("uuid")
             var uuid: String? // 1b47567f-8f7b-444b-aae3-b0c634622d10
-        )
+        ): Parcelable
     }
 }

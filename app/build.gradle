@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
+    id 'kotlin-parcelize'
     id 'androidx.navigation.safeargs'
     id 'dagger.hilt.android.plugin'
 }
@@ -99,4 +100,6 @@ dependencies {
 
     //Kotlin Image Loading Library
     implementation "io.coil-kt:coil:2.1.0"
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 }

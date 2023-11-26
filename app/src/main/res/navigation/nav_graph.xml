@@ -15,4 +15,9 @@
         android:name="com.valorantagentsapplicationcleanarchitecture.presentation.agents_list.fragments.AgentsScreenFragment"
         android:label="fragment_agents_screen"
         tools:layout="@layout/fragment_agents_screen" />
+    <fragment
+        android:id="@+id/agentDetailsFragment"
+        android:name="com.valorantagentsapplicationcleanarchitecture.presentation.agents_details.fragment.AgentDetailsFragment"
+        android:label="fragment_agent_details"
+        tools:layout="@layout/fragment_agent_details" />
 </navigation>
